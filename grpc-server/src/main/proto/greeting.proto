@@ -1,0 +1,17 @@
+syntax = "proto3";
+package it.valeriovaudi.model;
+
+option java_multiple_files = true;
+option java_package = "it.valeriovaudi.model";
+
+message HelloRequest {
+  string name = 1;
+}
+message HelloReply {
+  string message = 1;
+}
+
+service GreetingsService {
+
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
